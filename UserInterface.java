@@ -1,7 +1,6 @@
 //Zibin Mei
 //1085722
-//Tut 01
-//Ver 5
+
 
 
 import java.util.Scanner;
@@ -11,12 +10,12 @@ import java.lang.Character;
 public class UserInterface
 {
 	Scanner in = new Scanner(System.in);
-	Manager list = new Manager();	
-	
-	//start method use to organize the class 
+	Manager list = new Manager();
+
+	//start method use to organize the class
 	public void start()
 	{
-		message();	
+		message();
 		while (true)
 		{
 			mainmenu();
@@ -42,7 +41,7 @@ public class UserInterface
 	{
 		System.out.println("Welcome to the movie collector x1000");
 		System.out.println("This program is for sorting your movie collection.");
-		System.out.println("Created by me!");	
+		System.out.println("Created by me!");
 	}
 	//quit message and exit program
 	public void quit()

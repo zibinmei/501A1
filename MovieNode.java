@@ -1,8 +1,6 @@
 //Zibin Mei
 //1085722
-//Tut 01
-//Ver 5
-
+/
 
 
 //create Movie nodes class - this is same as the class example.
@@ -25,20 +23,20 @@ public class MovieNode
 		data = someData;
 		this.next = next;
 	}
-	
+
 	//use to grab data off the node
-	public Movie getData() 
+	public Movie getData()
 	{
 		return(data);
 	}
-	//use to grab the nextnode 
+	//use to grab the nextnode
 	public MovieNode getNext()
 	{
 		return(next);
 	}
-	
+
 	//set data of current node
-	public void setData(Movie i) 
+	public void setData(Movie i)
 	{
 		data = i;
 	}
@@ -47,7 +45,7 @@ public class MovieNode
 	{
 		this.next = n;
 	}
-	
 
-	
+
+
 }
