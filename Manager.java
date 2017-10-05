@@ -15,22 +15,25 @@ public class Manager
         head = null;
     }
 
-		//input
+		//input - name
+		private String inName(){
+			String i = null;
+			do{
+				System.out.println("Enter Name: ");
+				i =in.nextLine();
+			}while (i == null || i == "");
+			return i.toUpperCase();
+		}
 
     //prompt the user to fill in movie info and add to a node then put in the last spot on list.
     public void addMovie()
     {
-			String name=null;
+			String name;
 			String[] cast=new String[3];
 			String genre="other";
 			int rating=0;
 			//ask for name
-			while (name == null || name == "")
-			{
-				System.out.println("Enter Name: ");
-				String i=in.nextLine();
-				name = i.toUpperCase();
-			}
+			name = inName();
 			//asking for cast
 			for (int k=0;k<3;k++)
 			{
