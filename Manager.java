@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Manager
 {
 	private MovieNode head;
-	static Scanner in = new Scanner(System.in);
+	private Scanner in = new Scanner(System.in);
 	// default constructor
     public Manager()
     {
@@ -16,7 +16,7 @@ public class Manager
     }
 
 	//input - name
-	static public String inputName(){
+	public String inputName(){
 			String i = null;
 			do{
 					System.out.println("Enter Name: ");
@@ -25,6 +25,18 @@ public class Manager
 			return i.toUpperCase();
 	}
 
+	//input - cast 
+	public String[] inputCast() {
+		String cast[] = null;
+		for (int k=0;k<3;k++)
+		{
+			int j=k+1;
+			System.out.println("Enter Cast #"+j+": ");
+			cast[k]=in.nextLine();
+		}
+		return cast;
+	}
+	
     //prompt the user to fill in movie info and add to a node then put in the last spot on list.
     public void addMovie()
     {
@@ -35,12 +47,7 @@ public class Manager
 			//ask for name
 			name = inputName();
 			//asking for cast
-			for (int k=0;k<3;k++)
-			{
-				int j=k+1;
-				System.out.println("Enter Cast #"+j+": ");
-				cast[k]=in.nextLine();
-			}
+			cast = inputCast();
 
 			//asking for genre type
 			boolean i =true;

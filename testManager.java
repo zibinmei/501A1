@@ -5,9 +5,13 @@ import org.junit.Test;
 
 public class testManager {
 
+	public Manager M = new Manager();
+
+	
 	@Test
-	public void testInname() {
-		assertEquals("JOHN", Manager.inputName());	
+	public void testInputs() {
+		assertEquals("JOHN", M.inputName());	
+	//	assertEquals({}, )
 	}
 
 }
