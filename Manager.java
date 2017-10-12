@@ -8,22 +8,22 @@ import java.util.Scanner;
 public class Manager
 {
 	private MovieNode head;
-	Scanner in = new Scanner(System.in);
+	static Scanner in = new Scanner(System.in);
 	// default constructor
     public Manager()
     {
         head = null;
     }
 
-		//input - name
-		private String inName(){
+	//input - name
+	static public String inputName(){
 			String i = null;
 			do{
-				System.out.println("Enter Name: ");
-				i =in.nextLine();
+					System.out.println("Enter Name: ");
+					i =in.nextLine();
 			}while (i == null || i == "");
 			return i.toUpperCase();
-		}
+	}
 
     //prompt the user to fill in movie info and add to a node then put in the last spot on list.
     public void addMovie()
@@ -33,7 +33,7 @@ public class Manager
 			String genre="other";
 			int rating=0;
 			//ask for name
-			name = inName();
+			name = inputName();
 			//asking for cast
 			for (int k=0;k<3;k++)
 			{
